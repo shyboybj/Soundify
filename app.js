@@ -17,14 +17,24 @@ myApp.controller('homeController', function($scope, $http) {
         .then(function(response) {
             // Data retrieval successful
             $scope.jsonData = response.data;
-            console.log($scope.jsonData);
-            $scope.test = "working";
-            console.log($scope.jsonData.data.body.rows)
         })
         .catch(function(error) {
             // Error occurred during data retrieval
             console.error('Error fetching JSON data:', error);
         });
+
+    $scope.isExcluded = function(heading) {
+        var excludedWords = ['radio', 'podcasts', 'video'];
+        var lowerCaseHeading = heading.toLowerCase();
+          
+        for (var i = 0; i < excludedWords.length; i++) {
+            if (lowerCaseHeading.indexOf(excludedWords[i]) !== -1) {
+                return true;
+            }
+        }
+        return false;
+    };
+          
 });
 
 
