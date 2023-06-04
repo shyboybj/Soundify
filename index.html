@@ -1,14 +1,12 @@
 <html class="mobile-web-player" lang="en" dir="ltr">
 	<head>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
   
 		<meta charset="utf-8">
 		<title>Spotify - Music for everyone</title>
 		<meta property="og:site_name" content="Spotify">
-		<meta property="fb:app_id" content="174829003346">
+		<!-- <meta property="fb:app_id" content="174829003346"> -->
 		<meta http-equiv="X-UA-Compatible" content="IE=9">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="Spotify is a digital music service that gives you access to millions of songs.">
@@ -19,7 +17,7 @@
 		<meta property="og:image" content="https://open.spotifycdn.com/cdn/images/og-image.548bc4b7.png">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="Spotify">
-		<meta name="al:android:app_name" content="Spotify">
+		<!-- <meta name="al:android:app_name" content="Spotify">
 		<meta name="al:android:package" content="com.spotify.music">
 		<meta name="al:android:url" content="spotify://">
 		<meta name="al:ios:app_name" content="Spotify">
@@ -36,21 +34,21 @@
 		<link rel="alternate" href="https://open.spotify.com/intl-id" hreflang="id">
 		<link rel="alternate" href="https://open.spotify.com/intl-de" hreflang="de">
 		<link rel="alternate" href="android-app://com.spotify.music/">
-		<link rel="search" type="application/opensearchdescription+xml" title="Spotify" href="https://open.spotifycdn.com/cdn/generated/opensearch.4cd8879e.xml">
+		<link rel="search" type="application/opensearchdescription+xml" title="Spotify" href="https://open.spotifycdn.com/cdn/generated/opensearch.4cd8879e.xml"> -->
 		<link rel="icon" sizes="32x32" type="image/png" href="favicon.ico">
         
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="/pwa/manifest.json">
-    <script>
-      if ('serviceWorker' in navigator) {
-      // if (!navigator.serviceWorker.controller) {
-          navigator.serviceWorker.register("/pwa/sw.js").then(function(reg) {
-              console.log("Service worker has been registered for scope: " + reg.scope);
-          }).catch(function(error) {
-            console.log('Service Worker registration failed:', error);
-          });
-      }
-    </script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="manifest" href="/pwa/manifest.json">
+		<script>
+		if ('serviceWorker' in navigator) {
+		// if (!navigator.serviceWorker.controller) {
+			navigator.serviceWorker.register("/pwa/sw.js").then(function(reg) {
+				console.log("Service worker has been registered for scope: " + reg.scope);
+			}).catch(function(error) {
+				console.log('Service Worker registration failed:', error);
+			});
+		}
+		</script>
 		<style>img[src="data:,"],source[src="data:,"]{display:none!important}</style>
 	</head>
 	<body class="mobile-web-player" ng-app="Productportfolio">
@@ -59,15 +57,82 @@
 				<div class="encore-dark-theme xXxkvFpB54Fne7ykRnXa" data-main-scrollable-node="true">
 					<div class="Cv2QMWaKhio30Ly6ooMy">
 
-            <style>
-              .WgXPl8hmQOs4k7Em9TTI {
-                display: none;
-              }
-              /* Bottom Audio Player */
-              .Rj38soYIO7xO9JyFZM7x {
-                display: none;
-              }
-            </style>
+						<style>
+							.WgXPl8hmQOs4k7Em9TTI {
+								display: none;
+							}
+							
+							/* Bottom Audio Player */
+							.Rj38soYIO7xO9JyFZM7x {
+								display: none;
+							}
+							
+							.marquee {
+								-moz-transform: translateX(0%);
+								-webkit-transform: translateX(0%);
+								transform: translateX(0%);
+								-moz-animation: scroll-subtitle 10s linear infinite;
+								-webkit-animation: scroll-subtitle 10s linear infinite;
+								animation: scroll-subtitle 10s linear infinite;
+								animation-delay: 5s;
+							}
+
+							@-moz-keyframes scroll-subtitle {
+								0% {
+									-moz-transform: translateX(0%);
+								}
+								7% {
+									-moz-transform: translateX(0%);
+								}
+								49.999% {
+									-moz-transform: translateX(-100%);
+								}
+								50% {
+									-moz-transform: translateX(100%);
+								}
+								100% {
+									-moz-transform: translateX(0%);
+								}
+							}
+							
+							@-webkit-keyframes scroll-subtitle {
+								0% {
+									-webkit-transform: translateX(0%);
+								}
+								7% {
+									-webkit-transform: translateX(0%);
+								}
+								49.999% {
+									-webkit-transform: translateX(-100%);
+								}
+								50% {
+									-webkit-transform: translateX(100%);
+								}
+								100% {
+									-webkit-transform: translateX(0%);
+								}
+							}
+
+							@keyframes scroll-subtitle {
+								0% {
+									transform: translateX(0%);
+								}
+								7% {
+									transform: translateX(0%);
+								}
+								49.999% {
+									transform: translateX(-100%);
+								}
+								50% {
+									transform: translateX(100%);
+								}
+								100% {
+									transform: translateX(0%);
+								}
+							}
+
+						</style>
+
             <div class="WgXPl8hmQOs4k7Em9TTI" data-testid="entity-view-top-bar" style="--backgroundColor:#000000;--backgroundColorShade:rgba(0,0,0,0.5)">
               <div class="c1XHPjv6ZW1uVRksjeK0">
                 <a draggable="false" aria-current="page" class="NMw3sb63e2C5YJNyH5WW active" href="https://open.spotify.com/">
@@ -92,15 +157,15 @@
 						</div>
 						<div class="hK_6CFpJG8JDPkxhQT41">
 							<div data-testid="floating-now-playing-bar" class="Rj38soYIO7xO9JyFZM7x" style="--background-color:rgb(136,48,32);background-color:rgb(136,48,32)">
-                <img loading="eager" src="SOngThumbnail.png" alt="" class="mMx2LUixlnN_Fu45JpFB pXPrDQuZwVTOvkQhu92j Yn2Ei5QZn19gria6LjZj">
+                				<img loading="eager" src="" alt="" class="mMx2LUixlnN_Fu45JpFB pXPrDQuZwVTOvkQhu92j Yn2Ei5QZn19gria6LjZj">
 								<div class="MzSNEFiHmU9uhBlp8TaD">
 									<div class="hdgGtl7SSeRqERt7_sKQ">
 										<div class="x0JR0d_48vNetlDnfSQb">
 											<div class="zAiloZ8QArl6sathqdbw">
-												<div class="HJpr0Ykhb_GbZUePKH3r" style="--trans-x:0px"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 asTge">Yaen Ennai Pirindhaai</span></div>
+												<div class="HJpr0Ykhb_GbZUePKH3r" style="--trans-x:0px"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 asTge"></span></div>
 											</div>
 										</div>
-                    <span class="Type__TypeElement-sc-goli3j-0 eMzEmF VRq4id4IImgH9ykK7Gj1" style="text-align: initial;">Anirudh Ravichander</span>
+					                    <span class="Type__TypeElement-sc-goli3j-0 eMzEmF VRq4id4IImgH9ykK7Gj1" style="text-align: initial;width: 200px;overflow-x: scroll;">Anirudh Ravichander</span>
 									</div>
 								</div>
 								<div class="y7JZhjvVEjC0pumwW5iV">
