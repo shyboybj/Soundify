@@ -69,6 +69,8 @@ myApp.controller('homeController', function($scope, $http) {
     $scope.AddToQueue = function(id) {
         console.log(id);
         if (id.startsWith("playlist-")) {
+            $scope.playlist = [];
+                        
             $http.get('https://page.api.hungama.com/v2/page/content/'+ id.replace("playlist-", "") +'/playlist/detail?contentType=4&alang=en&mlang=en&vlang=ta&device=web&platform=a&storeId=1&uid=1177036924')
             .then(function(response) {
                 var songList = response.data.data.body.rows;
@@ -110,7 +112,6 @@ myApp.controller('homeController', function($scope, $http) {
                 console.error('Error fetching JSON data:', error);
             });
         } else {
-            $scope.playlist = [];
             $http.get('https://curls.api.hungama.com/v1/content/'+id+'/url/playable?contentType=4&alang=en&mlang=en&vlang=ta&device=web&platform=a&storeId=1&uid=1177036924')
             .then(function(response) {
                 $scope.playlist.push(

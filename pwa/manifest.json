@@ -1,50 +1,59 @@
 {
     "name": "Soundify",
     "icons": [
-        {
-            "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_192.ebf939fd.png",
-            "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_384.b98158a0.png",
-            "type": "image/png",
-            "sizes": "384x384"
-        },
-        {
-            "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_512.50dd387d.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        },
-        {
-            "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_512.50dd387d.png",
-            "type": "image/png",
-            "sizes": "512x512",
-            "purpose": "maskable"
-        }
+      {
+        "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_192.ebf939fd.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_384.b98158a0.png",
+        "type": "image/png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_512.50dd387d.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "https://open.spotifycdn.com/cdn/images/icons/Spotify_MWP_512.50dd387d.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      }
     ],
-    "start_url": "http://127.0.0.1:5500/#!/",
+    "start_url": "https://soundify-7en.pages.dev/",
     "display": "standalone",
     "background_color": "#121212",
     "theme_color": "#121212",
     "prefer_related_applications": true,
     "related_applications": [
-        {
-            "platform": "play",
-            "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
-            "id": "com.spotify.music"
-        },
-        {
-            "platform": "itunes",
-            "url": "https://apps.apple.com/app/spotify-music/id324684580"
-        },
-        {
-            "platform": "windows",
-            "url": "https://apps.microsoft.com/store/detail/spotify/9NCBCSZSJRSB"
-        },
-        {
-            "platform": "amazon",
-            "url": "https://www.amazon.com/Spotify-Music/dp/B00KLBR6IC"
-        }
+      {
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
+        "id": "com.spotify.music"
+      },
+      {
+        "platform": "itunes",
+        "url": "https://apps.apple.com/app/spotify-music/id324684580"
+      },
+      {
+        "platform": "windows",
+        "url": "https://apps.microsoft.com/store/detail/spotify/9NCBCSZSJRSB"
+      },
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/Spotify-Music/dp/B00KLBR6IC"
+      }
+    ],
+    "short_name": "Soundify",
+    "description": "With Soundify PWA, you can enjoy a vast collection of millions of songs and albums, all accessible for free. Stream music, explore albums, playlists, and individual tracks directly from your mobile or tablet device. Soundify Web APP provides a seamless and immersive music streaming experience, right from your web browser. Discover new music, create personalized playlists, and enjoy the freedom of listening to your favorite songs without any limitations. Experience the joy of music with Soundify, wherever you go.",
+    "dir": "ltr",
+    "lang": "en",
+    "orientation": "portrait-primary",
+    "categories": [
+      "music",
+      "personalization"
     ]
-}
+  }
