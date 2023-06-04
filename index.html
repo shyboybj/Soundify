@@ -152,61 +152,67 @@
 							
 							@keyframes topAnimation {
 								from {
-									top: 667px;
+									top: var(--screenHeight);
 								}
 								to {
 									top: 0;
 								}
 							}
+							/* Close Full Screen Music Player */
+							.animate-bottom {
+								animation: topAnimation 1s forwards;
+								animation-direction: reverse;
+							}
 						</style>
 
-            <div class="WgXPl8hmQOs4k7Em9TTI" data-testid="entity-view-top-bar" style="--backgroundColor:#000000;--backgroundColorShade:rgba(0,0,0,0.5)">
-              <div class="c1XHPjv6ZW1uVRksjeK0">
-                <a draggable="false" aria-current="page" class="NMw3sb63e2C5YJNyH5WW active" href="index.html#!/">
-					<img src="logo.png" height="35" title="Soundify">
-                </a>
-              </div>
-              <div class="xdBFM20jlfuhrxxERzoR"></div>
-              <div class="JM2zGYawSwyoOKBmo1ph">
-                <a draggable="false" class="V7faNUQZHOPh68ejp4o2" href="https://open.spotify.com/search/recent">
-                  <svg role="img" height="16" width="16" aria-hidden="true" data-testid="search-icon" viewBox="0 0 16 16" data-encore-id="icon" class="Svg-sc-ytk21e-0 cPOAno">
-                    <path d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="m6BzEMzOdb33y0G6kI1m" style="--bottomMargin:126px">
-              <ng-view></ng-view>
+						<div class="WgXPl8hmQOs4k7Em9TTI" data-testid="entity-view-top-bar" style="--backgroundColor:#000000;--backgroundColorShade:rgba(0,0,0,0.5)">
+						<div class="c1XHPjv6ZW1uVRksjeK0">
+							<a draggable="false" aria-current="page" class="NMw3sb63e2C5YJNyH5WW active" href="index.html#!/">
+								<img src="logo.png" height="35" title="Soundify">
+							</a>
 						</div>
+						<div class="xdBFM20jlfuhrxxERzoR"></div>
+						<div class="JM2zGYawSwyoOKBmo1ph">
+							<a draggable="false" class="V7faNUQZHOPh68ejp4o2" href="https://open.spotify.com/search/recent">
+							<svg role="img" height="16" width="16" aria-hidden="true" data-testid="search-icon" viewBox="0 0 16 16" data-encore-id="icon" class="Svg-sc-ytk21e-0 cPOAno">
+								<path d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"></path>
+							</svg>
+							</a>
+						</div>
+						</div>
+
+						<div class="m6BzEMzOdb33y0G6kI1m" style="--bottomMargin:126px">
+							<ng-view></ng-view>
+						</div>
+
 						<div class="hK_6CFpJG8JDPkxhQT41">
 							<div data-testid="floating-now-playing-bar" class="Rj38soYIO7xO9JyFZM7x" style="--background-color:rgb(136,48,32);background-color:rgb(136,48,32)">
-                				<img loading="eager" src="" alt="" class="mMx2LUixlnN_Fu45JpFB pXPrDQuZwVTOvkQhu92j Yn2Ei5QZn19gria6LjZj" ng-click="animateElement($event)">
-								<div class="MzSNEFiHmU9uhBlp8TaD" ng-click="animateElement($event)">
-									<div class="hdgGtl7SSeRqERt7_sKQ">
-										<div class="x0JR0d_48vNetlDnfSQb">
-											<div class="zAiloZ8QArl6sathqdbw">
-												<div class="HJpr0Ykhb_GbZUePKH3r" style="--trans-x:0px"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 asTge"></span></div>
+								<img loading="eager" src="" alt="" class="mMx2LUixlnN_Fu45JpFB pXPrDQuZwVTOvkQhu92j Yn2Ei5QZn19gria6LjZj" onclick="animateElement()">
+									<div class="MzSNEFiHmU9uhBlp8TaD" onclick="animateElement()">
+										<div class="hdgGtl7SSeRqERt7_sKQ">
+											<div class="x0JR0d_48vNetlDnfSQb">
+												<div class="zAiloZ8QArl6sathqdbw">
+													<div class="HJpr0Ykhb_GbZUePKH3r" style="--trans-x:0px"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 asTge"></span></div>
+												</div>
 											</div>
+											<span class="Type__TypeElement-sc-goli3j-0 eMzEmF VRq4id4IImgH9ykK7Gj1" style="text-align: initial;overflow-x: scroll;width: max-content;">Anirudh Ravichander</span>
 										</div>
-					                    <span class="Type__TypeElement-sc-goli3j-0 eMzEmF VRq4id4IImgH9ykK7Gj1" style="text-align: initial;overflow-x: scroll;width: max-content;">Anirudh Ravichander</span>
 									</div>
-								</div>
-								<div class="y7JZhjvVEjC0pumwW5iV">
-									<div class="AT0VzqPjjNnA8nQlO1TQ"></div>
-								</div>
-								<div class="yamyVSBHov2rOuWLOQ1_">
-									<button onclick="AddToFavourite(33)" type="button" role="switch" aria-checked="true" aria-label="Remove from Your Library" class="LDSCLTBPA5SMDx4mXgrg o61khbQP5vnRUl_kgi5O" data-testid="add-button" style="padding:8px">
-										<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
-											<path d="M8.667 1.912a6.257 6.257 0 0 0-7.462 7.677c.24.906.683 1.747 1.295 2.457l7.955 9.482a2.015 2.015 0 0 0 3.09 0l7.956-9.482a6.188 6.188 0 0 0 1.382-5.234l-.49.097.49-.099a6.303 6.303 0 0 0-5.162-4.98h-.002a6.24 6.24 0 0 0-5.295 1.65.623.623 0 0 1-.848 0 6.257 6.257 0 0 0-2.91-1.568z"></path>
-										</svg>
-									</button>
-									<div>
+									<div class="y7JZhjvVEjC0pumwW5iV">
+										<div class="AT0VzqPjjNnA8nQlO1TQ"></div>
+									</div>
+									<div class="yamyVSBHov2rOuWLOQ1_">
+										<button onclick="AddToFavourite(33)" type="button" role="switch" aria-checked="true" aria-label="Remove from Your Library" class="LDSCLTBPA5SMDx4mXgrg o61khbQP5vnRUl_kgi5O" data-testid="add-button" style="padding:8px">
+											<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+												<path d="M8.667 1.912a6.257 6.257 0 0 0-7.462 7.677c.24.906.683 1.747 1.295 2.457l7.955 9.482a2.015 2.015 0 0 0 3.09 0l7.956-9.482a6.188 6.188 0 0 0 1.382-5.234l-.49.097.49-.099a6.303 6.303 0 0 0-5.162-4.98h-.002a6.24 6.24 0 0 0-5.295 1.65.623.623 0 0 1-.848 0 6.257 6.257 0 0 0-2.91-1.568z"></path>
+											</svg>
+										</button>
+										<div>
 										<button class="HwrcB8qIw0GUzgugTyhC" data-test-id="play-pause-button" onclick="PlayPauseAudio()">
 											<svg id="pauseIcon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
 												<path d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
 											</svg>
-						                    <svg id="playIcon" style="display:none" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+											<svg id="playIcon" style="display:none" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
 										</button>
 									</div>
 								</div>
@@ -244,7 +250,7 @@
 			<aside class="encore-dark-theme wn0cyEPwai99nZ5phaKd">
 				<div class="sd0L6YMWoiSDaK24Vgg0 non-selectable-text encore-dark-theme npv-slide-up-enter-done" data-testid="npv-container" style="background-color: rgb(189, 91, 0);">
 					<div class="f_tN6MLvcGOqLFg9IEVT azG44gILXvjgeMcGHE9g">
-						<button class="Button-sc-1dqy6lx-0 JjLp" aria-label="Close" data-encore-id="buttonTertiary">
+						<button class="Button-sc-1dqy6lx-0 JjLp" aria-label="Close" onclick="CloseMusicPlayer()">
 							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
 								<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
 									<path d="M2.793 8.043a1 1 0 0 1 1.414 0L12 15.836l7.793-7.793a1 1 0 1 1 1.414 1.414L12 18.664 2.793 9.457a1 1 0 0 1 0-1.414z"></path>
@@ -267,12 +273,6 @@
 						<div class="MzSNEFiHmU9uhBlp8TaD">
 							<div class="hdgGtl7SSeRqERt7_sKQ">
 								<div data-testid="npv-cover-art" class="ye9I2HkrCG4rZTUQyyVk" role="presentation" style="background-image: url(&quot;https://i.scdn.co/image/ab67616d00001e02f8ce08ea1c8bb2e4a5bc1df7&quot;);"></div>
-							</div>
-							<div class="hdgGtl7SSeRqERt7_sKQ">
-								<div data-testid="npv-cover-art" class="ye9I2HkrCG4rZTUQyyVk" role="presentation" style="background-image: url(&quot;https://i.scdn.co/image/ab67616d00001e02ca041663617f8a76265824d5&quot;);"></div>
-							</div>
-							<div class="hdgGtl7SSeRqERt7_sKQ">
-								<div data-testid="npv-cover-art" class="ye9I2HkrCG4rZTUQyyVk" role="presentation" style="background-image: url(&quot;https://i.scdn.co/image/ab67616d00001e022cdb9a15ab333d4024086379&quot;);"></div>
 							</div>
 						</div>
 					</div>
@@ -408,31 +408,41 @@
           	}
       	}
 
-      // var data = {};
-      // data["favouriteSong"] = [];
-      // chrome.storage.local.set(data, function() {
-      //   console.log('Data saved successfully!');
-      // });
+		function animateElement() {
+			var FullScreenMusicPlayer = document.querySelector("aside.encore-dark-theme.wn0cyEPwai99nZ5phaKd");
+			FullScreenMusicPlayer.classList.add('animate-top');
+			FullScreenMusicPlayer.classList.remove('animate-bottom');
+			FullScreenMusicPlayer.style.display = "block";
+    	}
 
-      // // Save data to Chrome Storage
-      // function AddToFavourite(value) {
-      //   // Retrieve data from Chrome Storage
-      //   chrome.storage.local.get("favouriteSong", function(result) {
-      //     var favouriteSong = result["favouriteSong"];
-      //     console.log('Retrieved data:', value);
-      //     console.log(favouriteSong);
-      //   });
+		var style = document.createElement('style');
+		style.type = 'text/css';
+		style.innerHTML = '--screenHeight: ' + screen.height + 'px;';
+		document.getElementsByTagName('head')[0].appendChild(style);
 
-      //   var data = {};
-      //   favouriteSong.push(value);
-      //   data["favouriteSong"] = favouriteSong;
-      //   chrome.storage.local.set(data, function() {
-      //     console.log('Data saved successfully!');
-      //     console.log(favouriteSong);
-      //   });
-      // }
+		function CloseMusicPlayer() {
+			var FullScreenMusicPlayer = document.querySelector("aside.encore-dark-theme.wn0cyEPwai99nZ5phaKd")
+			FullScreenMusicPlayer.classList.add('animate-bottom');
+			FullScreenMusicPlayer.classList.remove('animate-top');
+    	}
 
-      
+		function convertTimeToString(time) {
+			totalNumberOfSeconds = Math.floor(time)
+			const hours = parseInt( totalNumberOfSeconds / 3600 );
+			const minutes = parseInt( (totalNumberOfSeconds - (hours * 3600)) / 60 );
+			const seconds = Math.floor((totalNumberOfSeconds - ((hours * 3600) + (minutes * 60))));
+			const result = (minutes < 10 ?  + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds);
+			return result;
+		}
+
+		let musicPlayer = document.getElementById('audioPlayer');
+
+		// Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
+		musicPlayer.ontimeupdate = function() {
+			document.querySelector(".wsMsL6O9vq9NXeK98DgS").style.cssText = '--progress-bar-transform: ' + (this.currentTime / this.duration) + '%;'
+			document.querySelectorAll(".TrWQmYUGRg0TJgHBDlIW span")[0].innerHTML = convertTimeToString(this.currentTime);
+		};
+
     </script>
     <script src="app.js"></script>
 	</body>

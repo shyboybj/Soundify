@@ -14,7 +14,7 @@ myApp.controller('GFGController', function ($scope, $location, $rootScope) {
 myApp.controller('homeController', function($scope, $http) {
     $scope.playlist = [];
     document.querySelector("aside.encore-dark-theme.wn0cyEPwai99nZ5phaKd").style.top = screen.height;
-      
+
     // Audio player
     var audioPlayer = document.getElementById('audioPlayer');
     var currentIndex = 0;
@@ -42,6 +42,13 @@ myApp.controller('homeController', function($scope, $http) {
             document.querySelector('span.eMzEmF.VRq4id4IImgH9ykK7Gj1').innerHTML = $scope.playlist[index].subtitle;
             $scope.playlist[index].played = true;
 
+            // Full Page Music Player
+            document.querySelector(".ye9I2HkrCG4rZTUQyyVk").style.backgroundImage = "url(" + $scope.playlist[index].image + ")";
+            document.querySelector(".Type__TypeElement-sc-goli3j-0.asTge.bsm3UGe6l2Vomj_N_P5_").innerHTML = $scope.playlist[index].album;
+            document.querySelector(".Type__TypeElement-sc-goli3j-0.enkRrb a").innerHTML = $scope.playlist[index].title;
+            document.querySelector(".Type__TypeElement-sc-goli3j-0.hkczJp.yHoq8qZdWtWxbu79JrCl a").innerHTML = $scope.playlist[index].subtitle;
+
+
             // If the subtitle is larger than 171PX Then add the Scroll Animation
             var subTitleTag = document.querySelector("span.eMzEmF.VRq4id4IImgH9ykK7Gj1")
             var TitleTag = document.querySelector(".HJpr0Ykhb_GbZUePKH3r span")
@@ -51,15 +58,17 @@ myApp.controller('homeController', function($scope, $http) {
         }
     }
 
-    $scope.animateElement = function(event) {
-        console.log("ss");
-        var element = event.target;
-        element.classList.add('animate-top');
+    $scope.animateElement = function() {
+        var FullScreenMusicPlayer = document.querySelector("aside.encore-dark-theme.wn0cyEPwai99nZ5phaKd")
+        FullScreenMusicPlayer.classList.add('animate-top');
+        FullScreenMusicPlayer.style.display = "block";
     };
 
     audioPlayer.addEventListener('canplaythrough', function() {
         // Add Progress Bar For The Music Player after audio source has loaded
         document.querySelector(".AT0VzqPjjNnA8nQlO1TQ").setAttribute("style", "animation: " + audioPlayer.duration + "s linear 1 normal none running progress-start; ");
+        document.querySelectorAll(".TrWQmYUGRg0TJgHBDlIW span")[1].innerHTML = convertTimeToString(audioPlayer.duration);
+
     });
 
     audioPlayer.addEventListener('ended', function() {
@@ -94,6 +103,7 @@ myApp.controller('homeController', function($scope, $http) {
                         {
                             "id":songList[i].data.id,
                             "title":songList[i].data.title,
+                            "album":songList[i].data.title,
                             "subtitle":songList[i].data.subtitle,
                             "image":songList[i].data.image,
                             "audio":"",
@@ -107,6 +117,7 @@ myApp.controller('homeController', function($scope, $http) {
                         {
                             "id":songList[0].data.id,
                             "title":response.data.data.head.data.title,
+                            "album":response.data.data.head.data.title,
                             "subtitle":response.data.data.head.data.subtitle,
                             "image":response.data.data.head.data.image,
                             "audio":response.data.data.body.data.url.playable[2].data,
