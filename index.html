@@ -140,6 +140,24 @@
 								}
 							}
 
+							/* Hide The Music Player Full Page */
+							aside.encore-dark-theme.wn0cyEPwai99nZ5phaKd {
+								display: none;
+							}
+
+							/* Add Animation When The Music Payer Click And Open Full Screen */
+							.animate-top {
+								animation: topAnimation 2s forwards;
+							}
+							
+							@keyframes topAnimation {
+								from {
+									top: 667px;
+								}
+								to {
+									top: 0;
+								}
+							}
 						</style>
 
             <div class="WgXPl8hmQOs4k7Em9TTI" data-testid="entity-view-top-bar" style="--backgroundColor:#000000;--backgroundColorShade:rgba(0,0,0,0.5)">
@@ -163,8 +181,8 @@
 						</div>
 						<div class="hK_6CFpJG8JDPkxhQT41">
 							<div data-testid="floating-now-playing-bar" class="Rj38soYIO7xO9JyFZM7x" style="--background-color:rgb(136,48,32);background-color:rgb(136,48,32)">
-                				<img loading="eager" src="" alt="" class="mMx2LUixlnN_Fu45JpFB pXPrDQuZwVTOvkQhu92j Yn2Ei5QZn19gria6LjZj">
-								<div class="MzSNEFiHmU9uhBlp8TaD">
+                				<img loading="eager" src="" alt="" class="mMx2LUixlnN_Fu45JpFB pXPrDQuZwVTOvkQhu92j Yn2Ei5QZn19gria6LjZj" ng-click="animateElement($event)">
+								<div class="MzSNEFiHmU9uhBlp8TaD" ng-click="animateElement($event)">
 									<div class="hdgGtl7SSeRqERt7_sKQ">
 										<div class="x0JR0d_48vNetlDnfSQb">
 											<div class="zAiloZ8QArl6sathqdbw">
@@ -175,7 +193,7 @@
 									</div>
 								</div>
 								<div class="y7JZhjvVEjC0pumwW5iV">
-									<div class="AT0VzqPjjNnA8nQlO1TQ" style="animation:284831ms linear -30570ms 1 normal none running progress-start"></div>
+									<div class="AT0VzqPjjNnA8nQlO1TQ"></div>
 								</div>
 								<div class="yamyVSBHov2rOuWLOQ1_">
 									<button onclick="AddToFavourite(33)" type="button" role="switch" aria-checked="true" aria-label="Remove from Your Library" class="LDSCLTBPA5SMDx4mXgrg o61khbQP5vnRUl_kgi5O" data-testid="add-button" style="padding:8px">
@@ -223,35 +241,172 @@
 					</div>
 				</div>
 			</div>
+			<aside class="encore-dark-theme wn0cyEPwai99nZ5phaKd">
+				<div class="sd0L6YMWoiSDaK24Vgg0 non-selectable-text encore-dark-theme npv-slide-up-enter-done" data-testid="npv-container" style="background-color: rgb(189, 91, 0);">
+					<div class="f_tN6MLvcGOqLFg9IEVT azG44gILXvjgeMcGHE9g">
+						<button class="Button-sc-1dqy6lx-0 JjLp" aria-label="Close" data-encore-id="buttonTertiary">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
+								<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M2.793 8.043a1 1 0 0 1 1.414 0L12 15.836l7.793-7.793a1 1 0 1 1 1.414 1.414L12 18.664 2.793 9.457a1 1 0 0 1 0-1.414z"></path>
+								</svg>
+							</span>
+						</button>
+						<a draggable="false" class="bsm3UGe6l2Vomj_N_P5_" href="/search/hey%20s">
+							<div class="Type__TypeElement-sc-goli3j-0 asTge bsm3UGe6l2Vomj_N_P5_" data-encore-id="type"></div>
+							<div class="Type__TypeElement-sc-goli3j-0 asTge bsm3UGe6l2Vomj_N_P5_" data-testid="npv-header-title" data-encore-id="type">Imaikkaa Nodigal (Original Motion Picture Soundtrack)</div>
+						</a>
+						<button data-testid="npv-context-menu" class="Button-sc-1dqy6lx-0 JjLp" aria-label="Open context menu" data-encore-id="buttonTertiary">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
+								<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="ycT9rtdXyBURwnZ7Zmn6 _oMFHsv7KtTLLuwiWtxA">
+						<div class="MzSNEFiHmU9uhBlp8TaD">
+							<div class="hdgGtl7SSeRqERt7_sKQ">
+								<div data-testid="npv-cover-art" class="ye9I2HkrCG4rZTUQyyVk" role="presentation" style="background-image: url(&quot;https://i.scdn.co/image/ab67616d00001e02f8ce08ea1c8bb2e4a5bc1df7&quot;);"></div>
+							</div>
+							<div class="hdgGtl7SSeRqERt7_sKQ">
+								<div data-testid="npv-cover-art" class="ye9I2HkrCG4rZTUQyyVk" role="presentation" style="background-image: url(&quot;https://i.scdn.co/image/ab67616d00001e02ca041663617f8a76265824d5&quot;);"></div>
+							</div>
+							<div class="hdgGtl7SSeRqERt7_sKQ">
+								<div data-testid="npv-cover-art" class="ye9I2HkrCG4rZTUQyyVk" role="presentation" style="background-image: url(&quot;https://i.scdn.co/image/ab67616d00001e022cdb9a15ab333d4024086379&quot;);"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ndTNzGoW1aJqNsjH6i6H e6B8UJS7RR2UjzVKgGuD" data-testid="npv-metadata-container">
+						<div class="UVuUhgV0A4yQk6BcmqTf">
+							<div class="x0JR0d_48vNetlDnfSQb">
+								<div class="zAiloZ8QArl6sathqdbw">
+									<div class="HJpr0Ykhb_GbZUePKH3r" style="--trans-x: 0px;">
+										<div data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 enkRrb"><a draggable="false" href="/track/6EwRpLL5QThnF2k1sZzQpC">Kadhal Oru Aagayam</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="x0JR0d_48vNetlDnfSQb">
+								<div class="zAiloZ8QArl6sathqdbw">
+									<div class="HJpr0Ykhb_GbZUePKH3r" style="--trans-x: 0px;">
+										<div class="Type__TypeElement-sc-goli3j-0 hkczJp yHoq8qZdWtWxbu79JrCl" data-encore-id="type"><a draggable="false" href="/artist/7zFBW2JxM4bgTTKxCRcS8Q">Hiphop Tamizha, Teejay, Al Rufian</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<button type="button" role="switch" aria-checked="true" aria-label="Remove from Your Library" class="LDSCLTBPA5SMDx4mXgrg o61khbQP5vnRUl_kgi5O" data-testid="add-button" style="padding: 12px; margin: -12px;">
+								<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M8.667 1.912a6.257 6.257 0 0 0-7.462 7.677c.24.906.683 1.747 1.295 2.457l7.955 9.482a2.015 2.015 0 0 0 3.09 0l7.956-9.482a6.188 6.188 0 0 0 1.382-5.234l-.49.097.49-.099a6.303 6.303 0 0 0-5.162-4.98h-.002a6.24 6.24 0 0 0-5.295 1.65.623.623 0 0 1-.848 0 6.257 6.257 0 0 0-2.91-1.568z"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="zDjBR7SFuB4II3lcsDGp _lJpidGzdap0eaKj1CU6">
+						<div class="_KiJHk2i4AB0XbpDxwhB IIIYWcGiG9WaFCGwlvLh" data-testid="npv-progress-bar-wrapper">
+							<label class="hidden-visually">Change progress<input type="range" min="0" max="161" step="5" aria-valuetext="0:04/2:41" value="4"></label>
+							<div class="wsMsL6O9vq9NXeK98DgS" data-testid="progress-bar" style="--progress-bar-transform: 2.484472049689441%;">
+								<div class="CRgaOg1yrE7P5XbdoscG" data-testid="progress-bar-background">
+									<div class="Z6wt148SEtVVwj7qJNjw">
+										<div class="PIPxeZZmnstCcQcs8RhX"></div>
+									</div>
+									<div class="HBq457LSkKPFUWsUKijl"></div>
+								</div>
+							</div>
+						</div>
+						<div class="TrWQmYUGRg0TJgHBDlIW" data-testid="npv-progress-bar-time-labels"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 dijbtN">0:04</span><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 dijbtN">2:41</span></div>
+					</div>
+					<div class="i0EpoQ_QdpJiJ2AILPYe tCA3XtICLVtyJnK22Gko" dir="ltr">
+						<button data-testid="npv-shuffle-button" disabled="" class="Button-sc-1dqy6lx-0 JjLp" aria-label="Enable shuffle" data-encore-id="buttonTertiary">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
+								<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M18.788 3.702a1 1 0 0 1 1.414-1.414L23.914 6l-3.712 3.712a1 1 0 1 1-1.414-1.414L20.086 7h-1.518a5 5 0 0 0-3.826 1.78l-7.346 8.73a7 7 0 0 1-5.356 2.494H1v-2h1.04a5 5 0 0 0 3.826-1.781l7.345-8.73A7 7 0 0 1 18.569 5h1.518l-1.298-1.298z"></path>
+									<path d="M18.788 14.289a1 1 0 0 0 0 1.414L20.086 17h-1.518a5 5 0 0 1-3.826-1.78l-1.403-1.668-1.306 1.554 1.178 1.4A7 7 0 0 0 18.568 19h1.518l-1.298 1.298a1 1 0 1 0 1.414 1.414L23.914 18l-3.712-3.713a1 1 0 0 0-1.414 0zM7.396 6.49l2.023 2.404-1.307 1.553-2.246-2.67a5 5 0 0 0-3.826-1.78H1v-2h1.04A7 7 0 0 1 7.396 6.49z"></path>
+								</svg>
+							</span>
+						</button>
+						<button data-testid="npv-skip-previous-button" aria-label="Previous" data-encore-id="buttonTertiary" class="Button-sc-1dqy6lx-0 dzMTVx">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
+								<svg role="img" height="32" width="32" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M6.3 3a.7.7 0 0 1 .7.7v6.805l11.95-6.899a.7.7 0 0 1 1.05.606v15.576a.7.7 0 0 1-1.05.606L7 13.495V20.3a.7.7 0 0 1-.7.7H4.7a.7.7 0 0 1-.7-.7V3.7a.7.7 0 0 1 .7-.7h1.6z"></path>
+								</svg>
+							</span>
+						</button>
+						<div>
+							<div class="">
+								<button data-testid="npv-play-button" aria-label="Play" data-encore-id="buttonPrimary" class="Button-sc-qlcn5g-0 bYXmbW">
+									<span class="ButtonInner-sc-14ud5tc-0 jmIGLP encore-inverted-light-set M8KtHsmGHc6yD2scZsrI">
+										<span aria-hidden="true" class="IconWrapper__Wrapper-sc-1hf1hjl-0 lgQSxe">
+											<svg role="img" height="28" width="28" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+												<path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+											</svg>
+										</span>
+									</span>
+								</button>
+							</div>
+						</div>
+						<button data-testid="npv-skip-forward-button" aria-label="Next" data-encore-id="buttonTertiary" class="Button-sc-1dqy6lx-0 dzMTVx">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
+								<svg role="img" height="32" width="32" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M17.7 3a.7.7 0 0 0-.7.7v6.805L5.05 3.606A.7.7 0 0 0 4 4.212v15.576a.7.7 0 0 0 1.05.606L17 13.495V20.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-1.6z"></path>
+								</svg>
+							</span>
+						</button>
+						<button data-testid="npv-repeat-button" disabled="" class="Button-sc-1dqy6lx-0 JjLp" aria-label="Enable repeat" data-encore-id="buttonTertiary">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
+								<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M6 2a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5h1v-2H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-4.798l1.298-1.298a1 1 0 1 0-1.414-1.414L9.373 19l3.713 3.712a1 1 0 0 0 1.414-1.414L13.202 20H18a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5H6z"></path>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="F4kdfvI0TOJ1vYMeb3_V" data-testid="npv-footer">
+						<button data-testid="npv-connect-button" aria-label="Connect to a device" data-encore-id="buttonTertiary" class="Button-sc-1dqy6lx-0 eLFXPh">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 lipxYV">
+								<svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"></path>
+									<path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+								</svg>
+							</span>
+						</button>
+						<button data-testid="npv-share-button" aria-label="Share" data-encore-id="buttonTertiary" class="Button-sc-1dqy6lx-0 evkLfN">
+							<span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 dlqYDF">
+								<svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+									<path d="M12.875 2a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25zM10.25 3.125a2.625 2.625 0 1 1 .754 1.841L5.75 8l5.254 3.034a2.625 2.625 0 1 1-.704 1.326l-5-2.889a2.625 2.625 0 1 1 0-2.943l5-2.888a2.634 2.634 0 0 1-.051-.516zm-7.125 3.75a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25zm9.75 4.875a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25z"></path>
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</aside>
 		</div>
 
     <audio id="audioPlayer" width="100%" height="30" src=""></audio>
     <script>
-      var audioPlayer = document.getElementById('audioPlayer');
-      
-      function PlayPauseAudio() {
-          if (audioPlayer.paused) {
-              audioPlayer.play(); // If audio is paused, play it
-          } else {
-              audioPlayer.pause(); // If audio is playing, pause it
-          }
+     	var audioPlayer = document.getElementById('audioPlayer');
 
-          var pauseIcon = document.getElementById('pauseIcon'); // Replace 'elementId' with the ID of your element
+	    function PlayPauseAudio() {
+          	if (audioPlayer.paused) {
+            	audioPlayer.play(); // If audio is paused, play it
+          	} else {
+            	audioPlayer.pause(); // If audio is playing, pause it
+          	}
 
-          if (pauseIcon.style.display === 'none') {
-            pauseIcon.style.display = 'block'; // If element is hidden, show it
-          } else {
-            pauseIcon.style.display = 'none'; // If element is visible, hide it
-          }
+	        var pauseIcon = document.getElementById('pauseIcon'); // Replace 'elementId' with the ID of your element
 
-          var playIcon = document.getElementById('playIcon'); // Replace 'elementId' with the ID of your element
+        	if (pauseIcon.style.display === 'none') {
+            	pauseIcon.style.display = 'block'; // If element is hidden, show it
+          	} else {
+            	pauseIcon.style.display = 'none'; // If element is visible, hide it
+          	}
 
-          if (playIcon.style.display === 'none') {
-            playIcon.style.display = 'block'; // If element is hidden, show it
-          } else {
-            playIcon.style.display = 'none'; // If element is visible, hide it
-          }
-      }
+          	var playIcon = document.getElementById('playIcon'); // Replace 'elementId' with the ID of your element
+
+          	if (playIcon.style.display === 'none') {
+            	playIcon.style.display = 'block'; // If element is hidden, show it
+          	} else {
+            	playIcon.style.display = 'none'; // If element is visible, hide it
+          	}
+      	}
 
       // var data = {};
       // data["favouriteSong"] = [];

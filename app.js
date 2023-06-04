@@ -13,13 +13,16 @@ myApp.controller('GFGController', function ($scope, $location, $rootScope) {
 
 myApp.controller('homeController', function($scope, $http) {
     $scope.playlist = [];
+    document.querySelector("aside.encore-dark-theme.wn0cyEPwai99nZ5phaKd").style.top = screen.height;
       
     // Audio player
     var audioPlayer = document.getElementById('audioPlayer');
     var currentIndex = 0;
-    
+
     function playAudio(index) {
         if (index >= 0 && index < $scope.playlist.length) {
+
+            // Add The Audio FIle If Not Exists. Mainly Used For The Playlists Songs
             if ($scope.playlist[index].audio == "") {
                 $http.get('https://curls.api.hungama.com/v1/content/'+$scope.playlist[index].id+'/url/playable?contentType=4&alang=en&mlang=en&vlang=ta&device=web&platform=a&storeId=1&uid=1177036924')
                 .then(function(response) {
@@ -27,7 +30,8 @@ myApp.controller('homeController', function($scope, $http) {
                     console.log($scope.playlist);
                 });
             }
-            
+
+            // Add The Music Player In The Bottom
             audioPlayer.src = $scope.playlist[index].audio;
             audioPlayer.play();
             currentIndex = index;
@@ -46,7 +50,18 @@ myApp.controller('homeController', function($scope, $http) {
             }
         }
     }
-      
+
+    $scope.animateElement = function(event) {
+        console.log("ss");
+        var element = event.target;
+        element.classList.add('animate-top');
+    };
+
+    audioPlayer.addEventListener('canplaythrough', function() {
+        // Add Progress Bar For The Music Player after audio source has loaded
+        document.querySelector(".AT0VzqPjjNnA8nQlO1TQ").setAttribute("style", "animation: " + audioPlayer.duration + "s linear 1 normal none running progress-start; ");
+    });
+
     audioPlayer.addEventListener('ended', function() {
         var nextIndex = currentIndex + 1;
         if($scope.playlist.length == nextIndex) {
