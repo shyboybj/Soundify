@@ -23,7 +23,7 @@
         "purpose": "maskable"
       }
     ],
-    "start_url": "https://soundify-7en.pages.dev/",
+    "start_url": "http://127.0.0.1:5500/index.html",
     "display": "standalone",
     "background_color": "#121212",
     "theme_color": "#121212",

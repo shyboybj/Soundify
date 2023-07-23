@@ -160,7 +160,7 @@
 							}
 							/* Close Full Screen Music Player */
 							.animate-bottom {
-								animation: topAnimation 1s forwards;
+								animation: topAnimation 2s forwards;
 								animation-direction: reverse;
 							}
 						</style>
@@ -333,11 +333,14 @@
 						</button>
 						<div>
 							<div class="">
-								<button data-testid="npv-play-button" aria-label="Play" data-encore-id="buttonPrimary" class="Button-sc-qlcn5g-0 bYXmbW">
+								<button data-testid="npv-play-button" onclick="PlayPauseAudio()" aria-label="Play" data-encore-id="buttonPrimary" class="Button-sc-qlcn5g-0 bYXmbW">
 									<span class="ButtonInner-sc-14ud5tc-0 jmIGLP encore-inverted-light-set M8KtHsmGHc6yD2scZsrI">
 										<span aria-hidden="true" class="IconWrapper__Wrapper-sc-1hf1hjl-0 lgQSxe">
-											<svg role="img" height="28" width="28" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj">
+											<svg role="img" height="28" width="28" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj playIcon">
 												<path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+											</svg>
+											<svg role="img" style="display:none" height="28" width="28" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 ldgdZj pauseIcon">
+												<path d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
 											</svg>
 										</span>
 									</span>
@@ -406,6 +409,22 @@
           	} else {
             	playIcon.style.display = 'none'; // If element is visible, hide it
           	}
+
+			var pauseIcon = document.querySelector('.pauseIcon'); // Replace 'elementId' with the ID of your element
+
+			if (pauseIcon.style.display === 'none') {
+				pauseIcon.style.display = 'block'; // If element is hidden, show it
+			} else {
+				pauseIcon.style.display = 'none'; // If element is visible, hide it
+			}
+
+			var playIcon = document.querySelector('.playIcon'); // Replace 'elementId' with the ID of your element
+
+			if (playIcon.style.display === 'none') {
+				playIcon.style.display = 'block'; // If element is hidden, show it
+			} else {
+				playIcon.style.display = 'none'; // If element is visible, hide it
+			}
       	}
 
 		function animateElement() {
